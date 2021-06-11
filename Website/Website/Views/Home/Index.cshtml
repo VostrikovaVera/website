@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Website.Contracts.Models.Movie>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about available movies:</p>
+    <ul>
+        @foreach (var item in Model)
+        {
+        <li>
+            <b>@item.Name</b> by @item.DirectorName
+            <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Put" asp-route-id="@item.Id">Update</a>
+            <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+        </li>
+        }
+    </ul>
+</div>

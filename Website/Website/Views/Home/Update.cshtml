@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Add New Movie";
+}
+@model Website.Contracts.Models.Movie;
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <label>Movie name:</label><br />
+    <input type="text" name="name" value=@Model.Name /><br />
+    <label>Director name:</label><br />
+    <input type="text" name="directorName" value=@Model.DirectorName /><br />
+    <input type="submit" value="Update" />
+</form>
