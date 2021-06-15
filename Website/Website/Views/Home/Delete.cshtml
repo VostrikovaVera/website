@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Delete Movie";
+}
+@model Website.Contracts.Models.Movie;
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <h3>Are you sure you want to delete movie "@Model.Name" by @Model.DirectorName?</h3>
+    <input type="submit" value="Delete" />
+</form>

@@ -1,14 +1,15 @@
 ﻿@{
-    ViewData["Title"] = "Add New Movie";
+    ViewData["Title"] = "Update Movie";
 }
 @model Website.Contracts.Models.Movie;
 
 <h1>@ViewData["Title"]</h1>
 
 <form method="post">
+    <input type="hidden" value="@Model.Id" name="id" />
     <label>Movie name:</label><br />
-    <input type="text" name="name" value=@Model.Name /><br />
+    <input type="text" name="name" value="@Model.Name" /><br />
     <label>Director name:</label><br />
-    <input type="text" name="directorName" value=@Model.DirectorName /><br />
+    <input type="text" name="directorName" value="@Model.DirectorName" /><br />
     <input type="submit" value="Update" />
 </form>
